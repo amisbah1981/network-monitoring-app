@@ -1,0 +1,7 @@
+<div class="container">
+  <app-traffic-form (formSubmitted)="onFormSubmitted()"></app-traffic-form>
+  <app-attack-form (formSubmitted)="onFormSubmitted()"></app-attack-form>
+</div>
+<div class="container">
+  <app-traffic-display [trafficData]="trafficData" [maliciousTrafficData]="maliciousTrafficData"></app-traffic-display>
+</div>

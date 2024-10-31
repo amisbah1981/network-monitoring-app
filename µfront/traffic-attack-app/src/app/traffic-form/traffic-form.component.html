@@ -1,0 +1,12 @@
+<div class="form-container">
+  <h2>Create Traffic</h2>
+  <form (ngSubmit)="onSubmit()">
+    <label for="url">URL:</label>
+    <input type="text" id="url" name="url" [(ngModel)]="url">
+    
+    <label for="trafficType">Traffic Type:</label>
+    <input type="text" id="trafficType" name="trafficType" [(ngModel)]="trafficType">
+    
+    <button type="submit">Submit</button>
+  </form>
+</div>

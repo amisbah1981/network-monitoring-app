@@ -1,0 +1,12 @@
+<div class="form-container">
+  <h2>Create Attack</h2>
+  <form (ngSubmit)="onSubmit()">
+    <label for="url">URL:</label>
+    <input type="text" id="url" name="url" [(ngModel)]="url">
+    
+    <label for="attackType">Attack Type:</label>
+    <input type="text" id="attackType" name="attackType" [(ngModel)]="attackType">
+    
+    <button type="submit">Submit</button>
+  </form>
+</div>

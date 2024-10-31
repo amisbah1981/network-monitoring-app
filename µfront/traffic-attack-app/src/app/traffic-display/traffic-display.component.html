@@ -1,0 +1,237 @@
+<div class="traffic-container">
+  <h2>Edge Traffic Data</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Source IP</th>
+        <th>Source Port</th>
+        <th>Protocol</th>
+        <th>Destination IP</th>
+        <th>Destination Port</th>
+        <th>Timestamp</th>
+        <th>Traffic Type</th>
+        <th>Header Length</th>
+        <th>Protocol Type</th>
+        <th>Duration</th>
+        <th>Rate</th>
+        <th>SRate</th>
+        <th>DRate</th>
+        <th>FIN Flag Number</th>
+        <th>SYN Flag Number</th>
+        <th>RST Flag Number</th>
+        <th>PSH Flag Number</th>
+        <th>ACK Flag Number</th>
+        <th>ECE Flag Number</th>
+        <th>CWR Flag Number</th>
+        <th>ACK Count</th>
+        <th>SYN Count</th>
+        <th>FIN Count</th>
+        <th>RST Count</th>
+        <th>HTTP</th>
+        <th>HTTPS</th>
+        <th>DNS</th>
+        <th>Telnet</th>
+        <th>SMTP</th>
+        <th>SSH</th>
+        <th>IRC</th>
+        <th>TCP</th>
+        <th>UDP</th>
+        <th>DHCP</th>
+        <th>ARP</th>
+        <th>ICMP</th>
+        <th>IGMP</th>
+        <th>IPV</th>
+        <th>LLC</th>
+        <th>Total Sum</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Avg</th>
+        <th>Std</th>
+        <th>Total Size</th>
+        <th>IAT</th>
+        <th>Number</th>
+        <th>Magnitude</th>
+        <th>Radius</th>
+        <th>Covariance</th>
+        <th>Variance</th>
+        <th>Weight</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let traffic of trafficData">
+        <td>{{ traffic.id }}</td>
+        <td>{{ traffic.srcIp }}</td>
+        <td>{{ traffic.srcPort }}</td>
+        <td>{{ traffic.protocol }}</td>
+        <td>{{ traffic.dstIp }}</td>
+        <td>{{ traffic.dstPort }}</td>
+        <td>{{ traffic.timestamp }}</td>
+        <td>{{ traffic.trafficType }}</td>
+        <td>{{ traffic.headerLength }}</td>
+        <td>{{ traffic.protocolType }}</td>
+        <td>{{ traffic.duration }}</td>
+        <td>{{ traffic.rate }}</td>
+        <td>{{ traffic.srate }}</td>
+        <td>{{ traffic.drate }}</td>
+        <td>{{ traffic.finFlagNumber }}</td>
+        <td>{{ traffic.synFlagNumber }}</td>
+        <td>{{ traffic.rstFlagNumber }}</td>
+        <td>{{ traffic.pshFlagNumber }}</td>
+        <td>{{ traffic.ackFlagNumber }}</td>
+        <td>{{ traffic.eceFlagNumber }}</td>
+        <td>{{ traffic.cwrFlagNumber }}</td>
+        <td>{{ traffic.ackCount }}</td>
+        <td>{{ traffic.synCount }}</td>
+        <td>{{ traffic.finCount }}</td>
+        <td>{{ traffic.rstCount }}</td>
+        <td>{{ traffic.http }}</td>
+        <td>{{ traffic.https }}</td>
+        <td>{{ traffic.dns }}</td>
+        <td>{{ traffic.telnet }}</td>
+        <td>{{ traffic.smtp }}</td>
+        <td>{{ traffic.ssh }}</td>
+        <td>{{ traffic.irc }}</td>
+        <td>{{ traffic.tcp }}</td>
+        <td>{{ traffic.udp }}</td>
+        <td>{{ traffic.dhcp }}</td>
+        <td>{{ traffic.arp }}</td>
+        <td>{{ traffic.icmp }}</td>
+        <td>{{ traffic.igmp }}</td>
+        <td>{{ traffic.ipv }}</td>
+        <td>{{ traffic.llc }}</td>
+        <td>{{ traffic.totSum }}</td>
+        <td>{{ traffic.min }}</td>
+        <td>{{ traffic.max }}</td>
+        <td>{{ traffic.avg }}</td>
+        <td>{{ traffic.std }}</td>
+        <td>{{ traffic.totSize }}</td>
+        <td>{{ traffic.iat }}</td>
+        <td>{{ traffic.number }}</td>
+        <td>{{ traffic.magnitude }}</td>
+        <td>{{ traffic.radius }}</td>
+        <td>{{ traffic.covariance }}</td>
+        <td>{{ traffic.variance }}</td>
+        <td>{{ traffic.weight }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Malicious Traffic Data</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Source IP</th>
+        <th>Source Port</th>
+        <th>Protocol</th>
+        <th>Destination IP</th>
+        <th>Destination Port</th>
+        <th>Timestamp</th>
+        <th>Traffic Type</th>
+        <th>Header Length</th>
+        <th>Protocol Type</th>
+        <th>Duration</th>
+        <th>Rate</th>
+        <th>SRate</th>
+        <th>DRate</th>
+        <th>FIN Flag Number</th>
+        <th>SYN Flag Number</th>
+        <th>RST Flag Number</th>
+        <th>PSH Flag Number</th>
+        <th>ACK Flag Number</th>
+        <th>ECE Flag Number</th>
+        <th>CWR Flag Number</th>
+        <th>ACK Count</th>
+        <th>SYN Count</th>
+        <th>FIN Count</th>
+        <th>RST Count</th>
+        <th>HTTP</th>
+        <th>HTTPS</th>
+        <th>DNS</th>
+        <th>Telnet</th>
+        <th>SMTP</th>
+        <th>SSH</th>
+        <th>IRC</th>
+        <th>TCP</th>
+        <th>UDP</th>
+        <th>DHCP</th>
+        <th>ARP</th>
+        <th>ICMP</th>
+        <th>IGMP</th>
+        <th>IPV</th>
+        <th>LLC</th>
+        <th>Total Sum</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Avg</th>
+        <th>Std</th>
+        <th>Total Size</th>
+        <th>IAT</th>
+        <th>Number</th>
+        <th>Magnitude</th>
+        <th>Radius</th>
+        <th>Covariance</th>
+        <th>Variance</th>
+        <th>Weight</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let traffic of maliciousTrafficData">
+        <td>{{ traffic.id }}</td>
+        <td>{{ traffic.srcIp }}</td>
+        <td>{{ traffic.srcPort }}</td>
+        <td>{{ traffic.protocol }}</td>
+        <td>{{ traffic.dstIp }}</td>
+        <td>{{ traffic.dstPort }}</td>
+        <td>{{ traffic.timestamp }}</td>
+        <td>{{ traffic.trafficType }}</td>
+        <td>{{ traffic.headerLength }}</td>
+        <td>{{ traffic.protocolType }}</td>
+        <td>{{ traffic.duration }}</td>
+        <td>{{ traffic.rate }}</td>
+        <td>{{ traffic.srate }}</td>
+        <td>{{ traffic.drate }}</td>
+        <td>{{ traffic.finFlagNumber }}</td>
+        <td>{{ traffic.synFlagNumber }}</td>
+        <td>{{ traffic.rstFlagNumber }}</td>
+        <td>{{ traffic.pshFlagNumber }}</td>
+        <td>{{ traffic.ackFlagNumber }}</td>
+        <td>{{ traffic.eceFlagNumber }}</td>
+        <td>{{ traffic.cwrFlagNumber }}</td>
+        <td>{{ traffic.ackCount }}</td>
+        <td>{{ traffic.synCount }}</td>
+        <td>{{ traffic.finCount }}</td>
+        <td>{{ traffic.rstCount }}</td>
+        <td>{{ traffic.http }}</td>
+        <td>{{ traffic.https }}</td>
+        <td>{{ traffic.dns }}</td>
+        <td>{{ traffic.telnet }}</td>
+        <td>{{ traffic.smtp }}</td>
+        <td>{{ traffic.ssh }}</td>
+        <td>{{ traffic.irc }}</td>
+        <td>{{ traffic.tcp }}</td>
+        <td>{{ traffic.udp }}</td>
+        <td>{{ traffic.dhcp }}</td>
+        <td>{{ traffic.arp }}</td>
+        <td>{{ traffic.icmp }}</td>
+        <td>{{ traffic.igmp }}</td>
+        <td>{{ traffic.ipv }}</td>
+        <td>{{ traffic.llc }}</td>
+        <td>{{ traffic.totSum }}</td>
+        <td>{{ traffic.min }}</td>
+        <td>{{ traffic.max }}</td>
+        <td>{{ traffic.avg }}</td>
+        <td>{{ traffic.std }}</td>
+        <td>{{ traffic.totSize }}</td>
+        <td>{{ traffic.iat }}</td>
+        <td>{{ traffic.number }}</td>
+        <td>{{ traffic.magnitude }}</td>
+        <td>{{ traffic.radius }}</td>
+        <td>{{ traffic.covariance }}</td>
+        <td>{{ traffic.variance }}</td>
+        <td>{{ traffic.weight }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
